@@ -13,15 +13,16 @@ the state export of the Cosmos Hub at [block 18010658](https://www.mintscan.io/c
 proposal [#848](https://www.mintscan.io/cosmos/proposals/848) is finalized and comes into effect.
 
 This base genesis includes the following changes:
-	- **x/bank**: disabled `sendTx` for `ugovgen` (and by default on the chain)
-	- **x/distribution**: community tax, proposer reward and bonus all set to 0
-	- **x/mint**: inflation disabled, no new $GOVGEN token minting
-	- **x/gov**: 
-		- deposit amount raised to 5000 $GOVGEN, 
-		- voting period extended to 28 days
-		- quorum raised to 50% 
-		- pass threshold increased to 2/3
-	- **x/staking**: reduced validators to 30 (tentatively)
+
+- **x/bank**: disabled `sendTx` for `ugovgen` (and by default on the chain)
+- **x/distribution**: community tax, proposer reward and bonus all set to 0
+- **x/mint**: inflation disabled, no new $GOVGEN token minting
+- **x/gov**: 
+	- deposit amount raised to 5000 $GOVGEN, 
+	- voting period extended to 28 days
+	- quorum raised to 50% 
+	- pass threshold increased to 2/3
+- **x/staking**: reduced validators to 30 (tentatively)
 
 
 **NOTE**: genesis time currently set at "1970-01-01T00:00:00Z"
