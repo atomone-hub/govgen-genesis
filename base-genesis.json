@@ -1,0 +1,164 @@
+{
+  "genesis_time": "1970-01-01T00:00:00Z",
+  "chain_id": "govgen-1",
+  "initial_height": "1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "2000000", 
+      "max_gas": "100000000", 
+      "time_iota_ms": "1000"
+    }, 
+    "evidence": {
+      "max_age_duration": "172800000000000", 
+      "max_age_num_blocks": "1000000", 
+      "max_bytes": "50000"
+    }, 
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    }, 
+    "version": {}
+  },
+  "app_hash": "",
+  "app_state": {
+    "auth": {
+      "params": {
+        "max_memo_characters": "512",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": []
+    },
+    "authz": {
+      "authorization": []
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [{"denom": "ugovgen", "enabled": false }],
+        "default_send_enabled": false
+      },
+      "balances": [],
+      "supply": [],
+      "denom_metadata": [
+        {
+          "base": "ugovgen", 
+          "denom_units": [
+            {"aliases": ["microgovgen"], "denom": "ugovgen", "exponent": 0}, 
+            {"aliases": ["milligovgen"], "denom": "mgovgen", "exponent": 3}, 
+            {"aliases": [], "denom": "govgen", "exponent": 6}
+          ], 
+          "description": "The native staking token of GovGen.", 
+          "display": "govgen", "name": "GovGen", "symbol": "GOVGEN"
+        }
+      ]
+    },
+    "capability": {
+      "index": "1",
+      "owners": []
+    },
+    "crisis": {
+      "constant_fee": {
+        "denom": "ugovgen",
+        "amount": "1333000000"
+      }
+    },
+    "distribution": {
+      "params": {
+        "community_tax": "0.000000000000000000",
+        "base_proposer_reward": "0.000000000000000000",
+        "bonus_proposer_reward": "0.000000000000000000",
+        "withdraw_addr_enabled": true
+      },
+      "fee_pool": {
+        "community_pool": []
+      },
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
+    },
+    "evidence": {
+      "evidence": []
+    },
+    "feegrant": {
+      "allowances": []
+    },
+    "genutil": {
+      "gen_txs": []
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": [],
+      "votes": [],
+      "proposals": [],
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "ugovno",
+            "amount": "5000000000"
+          }
+        ],
+        "max_deposit_period": "1209600s"
+      },
+      "voting_params": {
+        "voting_period": "2419200s"
+      },
+      "tally_params": {
+        "quorum": "0.500000000000000000",
+        "threshold": "0.667000000000000000",
+        "veto_threshold": "0.334000000000000000"
+      }
+    },
+    "mint": {
+      "minter": {
+        "inflation": "0.000000000000000000",
+        "annual_provisions": "0.000000000000000000"
+      },
+      "params": {
+        "mint_denom": "ugovgen",
+        "inflation_rate_change": "0.000000000000000000",
+        "inflation_max": "0.000000000000000000",
+        "inflation_min": "0.000000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "4360000"
+      }
+    },
+    "params": null,
+    "slashing": {
+      "params": {
+        "signed_blocks_window": "10000",
+        "min_signed_per_window": "0.050000000000000000",
+        "downtime_jail_duration": "600s",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.000100000000000000"
+      },
+      "signing_infos": [],
+      "missed_blocks": []
+    },
+    "staking": {
+      "params": {
+        "unbonding_time": "1814400s",
+        "max_validators": 30,
+        "max_entries": 7,
+        "historical_entries": 10000,
+        "bond_denom": "ugovgen"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": [],
+      "validators": [],
+      "delegations": [],
+      "unbonding_delegations": [],
+      "redelegations": [],
+      "exported": false
+    },
+    "upgrade": {},
+    "vesting": {}
+  }
+}
