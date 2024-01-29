@@ -6,6 +6,9 @@ Cosmos Hub proposal [#848](https://www.mintscan.io/cosmos/proposals/848)
 It relies on the work provided in https://github.com/atomone-hub/genesis/pull/103, 
 and follows the guidelines defined in https://github.com/atomone-hub/genesis/issues/71
 
+*NOTE*: check out `requirements.txt` for additional Python packages requirements.
+
+
 ## Base Genesis - params
 
 Created a `base-genesis.json` that contains the genesis parameters starting from 
@@ -39,6 +42,7 @@ token allocation, summing amounts from either direct votes - if present - or
 votes inherited from delegations. The output is a JSON file listing eligible 
 addresses with their respective $GOVGEN (`ugovgen`) amounts, and the total 
 supply of these tokens. 
+Addresses are also converted to have the `govgen` Bech32 prefix.
 
 The script takes two arguments: the input JSON file and the desired output 
 file's path. 

@@ -1,7 +1,9 @@
+import bech32
 import json
 import sys
 
 DENOM = "ugovgen"
+BECH32_PREFIX = "govgen"
 
 
 def calculate_weight(votes):
@@ -31,6 +33,10 @@ def process_address_data(item):
         total_amount = sum(amounts)
 
     if int(total_amount) > 0:
+        # convert bech32 prefix
+        p, addrRaw = bech32.bech32_decode(address)
+        address = bech32.bech32_encode(BECH32_PREFIX, addrRaw)
+
         return {"address": address, "coins": [
             {"denom": DENOM, "amount": str(int(total_amount))}]}
     else:
