@@ -34,7 +34,7 @@ def process_address_data(item):
 
     if int(total_amount) > 0:
         # convert bech32 prefix
-        p, addrRaw = bech32.bech32_decode(address)
+        _, addrRaw = bech32.bech32_decode(address)
         address = bech32.bech32_encode(BECH32_PREFIX, addrRaw)
 
         return {"address": address, "coins": [
