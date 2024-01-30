@@ -12,8 +12,9 @@ and follows the guidelines defined in https://github.com/atomone-hub/genesis/iss
 ## Base Genesis - params
 
 Created a `base-genesis.json` that contains the genesis parameters starting from 
-the state export of the Cosmos Hub at [block 18010658](https://www.mintscan.io/cosmos/block/18010658), which is when 
-proposal [#848](https://www.mintscan.io/cosmos/proposals/848) is finalized and comes into effect.
+the state export of the Cosmos Hub at [block 18010658](https://www.mintscan.io/cosmos/block/18010658),
+which is when proposal [#848](https://www.mintscan.io/cosmos/proposals/848)
+is finalized and comes into effect.
 
 This base genesis includes the following changes:
 

@@ -3,26 +3,27 @@ import sys
 
 
 def new_genesis_account(address):
-	return {
-			"@type": "/cosmos.auth.v1beta1.BaseAccount",
-			"address": address,
-			"pub_key": None,
-			"account_number": "0",
-			"sequence": "0"
-    	}
+    return {
+        "@type": "/cosmos.auth.v1beta1.BaseAccount",
+        "address": address,
+        "pub_key": None,
+        "account_number": "0",
+        "sequence": "0"
+    }
+
 
 def get_final_genesis(genesis, bank_balances_supply):
-	balances = bank_balances_supply["balances"]
-	accounts = [new_genesis_account(acct["address"]) for acct in balances]
-	genesis["app_state"]["auth"]["accounts"] = accounts
-	genesis["app_state"]["bank"]["balances"] = balances
-	genesis["app_state"]["bank"]["supply"] = bank_balances_supply["supply"]
+    balances = bank_balances_supply["balances"]
+    accounts = [new_genesis_account(acct["address"]) for acct in balances]
+    genesis["app_state"]["auth"]["accounts"] = accounts
+    genesis["app_state"]["bank"]["balances"] = balances
+    genesis["app_state"]["bank"]["supply"] = bank_balances_supply["supply"]
 
 
 def main():
     if len(sys.argv) != 3:
         print("Usage: python govgen-genesis.py <base-genesis.json> "
-        	  "<bank-balances-supply.json> [output.json]")
+              "<bank-balances-supply.json> [output.json]")
         sys.exit(1)
 
     base_genesis_file, bank_balances_supply_file = sys.argv[1:3]
