@@ -23,7 +23,7 @@ This base genesis includes the following changes:
 - **x/mint**: inflation disabled, no new $GOVGEN token minting
 - **x/gov**: 
 	- deposit amount raised to 5000 $GOVGEN, 
-	- voting period extended to 28 days
+	- voting period extended to 365 days
 	- quorum raised to 50% 
 	- pass threshold increased to 2/3
 - **x/staking**: reduced validators to 30 (tentatively)
