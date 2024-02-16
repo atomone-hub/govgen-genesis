@@ -108,7 +108,7 @@
         "max_deposit_period": "1209600s"
       },
       "voting_params": {
-        "voting_period_default": "172800s",
+        "voting_period_default": "1209600s",
         "voting_period_parameter_change": "1209600s",
         "voting_period_software_upgrade": "2419200s",
         "voting_period_text": "31536000s"
