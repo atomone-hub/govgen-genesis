@@ -25,7 +25,7 @@ This base genesis includes the following changes:
 	- deposit amount raised to 5000 $GOVGEN, 
 	- voting period is replaced by 3 new different voting periods:
            - for text proposal: 365 days
-        - for parameter change proposal: 14 days
+           - for parameter change proposal: 14 days
         - for software upgrade proposal: 28 days
 	- quorum raised to 50% 
 	- pass threshold increased to 2/3
