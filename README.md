@@ -8,6 +8,14 @@ and follows the guidelines defined in https://github.com/atomone-hub/genesis/iss
 
 *NOTE*: check out `requirements.txt` for additional Python packages requirements.
 
+## Genesis [download link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis.json).
+
+The genesis created using what is available in this repo can be downloaded at [this link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis.json).
+
+The genesis file is considered to be complete, but there might be some minor adjustments prior to launch to tweak parameters. 
+The actual genesis will be different though, as it will also contain the gen-txs from validators which can apply at https://github.com/atomone-hub/validator and also submit their gen-txs there.
+
+The launch date is going to be 27th of February 2024 at 14:00 UTC.
 
 ## Base Genesis - params
 
@@ -67,9 +75,3 @@ genesis file that is the result of the combination of the two.
 
 The third argument for the script is optional and specifies the output genesis
 JSON file, which by default is simply `genesis.json`.
-
----
-
-The resulting `genesis.json` should be almost ready for usage. 
-It would need validators and a proper genesis time, plus any further 
-modification needed.
