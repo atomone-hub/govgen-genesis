@@ -161,7 +161,7 @@ def process_gentxs(
 
 
 def main():
-    if len(sys.argv) != 3:
+    if len(sys.argv) < 3 or len(sys.argv) > 4:
         print("Usage: python govgen-collect-gentxs.py <input-genesis.json> "
               "</path/to/gentxs> [output.json]")
         sys.exit(1)
