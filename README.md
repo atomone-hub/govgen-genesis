@@ -1,4 +1,4 @@
-\# GovGen Genesis
+# GovGen Genesis
 
 This repo is dedicated to the creation of the GovGen genesis using data from
 Cosmos Hub proposal [#848](https://www.mintscan.io/cosmos/proposals/848)
