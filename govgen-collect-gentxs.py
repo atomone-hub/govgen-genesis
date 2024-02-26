@@ -35,6 +35,27 @@ def save_json(data, filename):
         json.dump(data, file, indent=4)
 
 
+def check_gentx_compliance(gentx):
+    messages = gentx['body']['messages']
+    for msg in messages:
+        if msg['@type'] == "/cosmos.staking.v1beta1.MsgCreateValidator":
+            commission = msg['commission']
+            min_self_delegation = msg['min_self_delegation']
+            moniker = msg['description']['moniker']
+            
+            # Check commission rates and min_self_delegation
+            if (commission['rate'] != "0.000000000000000000" or
+                commission['max_rate'] != "0.000000000000000000" or
+                commission['max_change_rate'] != "0.000000000000000000" or
+                min_self_delegation != "1"):
+                print(f"WARNING: {moniker}'s gentx does not comply with the "
+                      "format requirements and will be ignored.\n"
+                      f"  - commission: {commission}\n"
+                      f"  - min_self_delegation: {min_self_delegation}\n")
+                return False
+    return True
+
+
 def process_gentxs(genesis_path, gentxs_folder, genesis_out_path, denom, initial_balance):
     genesis = load_json(genesis_path)
     accounts = genesis.get('app_state', {}).get('auth', {}).get('accounts', [])
@@ -62,8 +83,10 @@ def process_gentxs(genesis_path, gentxs_folder, genesis_out_path, denom, initial
 
         delegator_address = gentx['body']['messages'][0]['delegator_address']
 
-        # sanity check: 
-
+        # sanity check
+        if not check_gentx_compliance(gentx):
+            # skip validator ad it did not comply with requirements
+            continue
 
         # Find the index in the balances list
         balance_index = next((i for i, item in enumerate(balances) if item["address"] == delegator_address), None)
