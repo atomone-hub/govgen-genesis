@@ -87,5 +87,5 @@ the path of the output genesis JSON file, which by default is simply
 
 The script will also fund validator accounts that did not exist initially with
 a 25 $GOVGEN balance to provide funds for operations. Validator accounts that
-already exists and do not have at least 25 $GOVGEN are also topped off to reach
+already exist and do not have at least 25 $GOVGEN are also topped off to reach
 that initial balance.
