@@ -1,5 +1,5 @@
 {
-  "genesis_time": "1970-01-01T00:00:00Z",
+  "genesis_time": "2024-02-27T14:00:00Z",
   "chain_id": "govgen-1",
   "initial_height": "1",
   "consensus_params": {
