@@ -105,7 +105,7 @@
             "amount": "5000000000"
           }
         ],
-        "max_deposit_period": "1209600s"
+        "max_deposit_period": "1824400s"
       },
       "voting_params": {
         "voting_period_default": "1209600s",
@@ -147,8 +147,8 @@
     },
     "staking": {
       "params": {
-        "unbonding_time": "1814400s",
-        "max_validators": 30,
+        "unbonding_time": "1209600s",
+        "max_validators": 77,
         "max_entries": 7,
         "historical_entries": 10000,
         "bond_denom": "ugovgen"

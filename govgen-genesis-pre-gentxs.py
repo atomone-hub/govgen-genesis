@@ -22,7 +22,7 @@ def get_final_genesis(genesis, bank_balances_supply):
 
 def main():
     if len(sys.argv) != 3:
-        print("Usage: python govgen-genesis.py <base-genesis.json> "
+        print("Usage: python govgen-genesis-pre-gentxs.py <base-genesis.json> "
               "<bank-balances-supply.json> [output.json]")
         sys.exit(1)
 
