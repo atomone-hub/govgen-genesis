@@ -12,8 +12,11 @@ and follows the guidelines defined in https://github.com/atomone-hub/genesis/iss
 
 The genesis created using what is available in this repo can be downloaded at [this link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis.json).
 
-The genesis file is considered to be complete, but there might be some minor adjustments prior to launch to tweak parameters. 
-The actual genesis will be different though, as it will also contain the gen-txs from validators which can apply at https://github.com/atomone-hub/validator and also submit their gen-txs there.
+The genesis file is considered to be complete, but there might be some minor
+adjustments prior to launch to tweak parameters. 
+The actual genesis will be different though, as it will also contain the gen-txs
+from validators which can apply at https://github.com/atomone-hub/validator and
+also submit their gen-txs there.
 
 The launch date is going to be 27th of February 2024 at 14:00 UTC.
 
@@ -31,6 +34,7 @@ This base genesis includes the following changes:
 - **x/mint**: inflation disabled, no new $GOVGEN token minting
 - **x/gov**: 
    - deposit amount raised to 5000 $GOVGEN,
+   - deposit period increased to 21 days
    -  voting period is replaced by 3 new different voting periods:
    
       - for text proposal: 365 days
@@ -40,10 +44,11 @@ This base genesis includes the following changes:
   
    - quorum raised to 50% 
    - pass threshold increased to 2/3
-- **x/staking**: reduced validators to 30 (tentatively)
+- **x/staking**: 
+   - reduced validators to 77, giving some room to post-genesis validators to join
+   - reduced unboding period to 14 days
 
-
-**NOTE**: genesis time currently set at "1970-01-01T00:00:00Z"
+**NOTE**: genesis time set as "2024-02-27T14:00:00Z"
 
 
 ## GovGen token distribution
