@@ -1,4 +1,4 @@
-\# GovGen Genesis
+# GovGen Genesis
 
 This repo is dedicated to the creation of the GovGen genesis using data from
 Cosmos Hub proposal [#848](https://www.mintscan.io/cosmos/proposals/848)
@@ -8,17 +8,18 @@ and follows the guidelines defined in https://github.com/atomone-hub/genesis/iss
 
 *NOTE*: check out `requirements.txt` for additional Python packages requirements.
 
-## Genesis [download link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis.json).
+## Final genesis [download link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis.json)
+The final genesis is avalable at [this link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis.json).
 
-The genesis created using what is available in this repo can be downloaded at [this link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis.json).
+It does include all gentxs collected from https://github.com/atomone-hub/validator/tree/main/govgen-1
 
-The genesis file is considered to be complete, but there might be some minor
-adjustments prior to launch to tweak parameters. 
+The launch date is going to be 27th of February 2024 at 14:00 UTC.
+
+## Pre-gentxs genesis [download link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis-nogentx.json).
+The genesis created using what is available in this repo can be downloaded at [this link](https://atomone.fra1.digitaloceanspaces.com/govgen/govgen-1/genesis-nogentx.json).
 The actual genesis will be different though, as it will also contain the gen-txs
 from validators which can apply at https://github.com/atomone-hub/validator and
 also submit their gen-txs there.
-
-The launch date is going to be 27th of February 2024 at 14:00 UTC.
 
 ## Base Genesis - params
 
